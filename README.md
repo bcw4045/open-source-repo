@@ -11,17 +11,17 @@
 getopt는 /usr/bin/getopt에 위치한 외부 명령으로 기본적으로 short, long 옵션을 모두 지원한다. 옵션이 인수를 가질 경우 :문자를 사용하여 표시한다.
 
 
-###getopt의 옵션
+### getopt의 옵션
 
 ***
 
 + -o : short option
 
--f, -a, -h와 같이 짧은 옵션들을 설정하고 싶을 때 사용
+	-f, -a, -h와 같이 짧은 옵션들을 설정하고 싶을 때 사용
 
 + -l : long option
 
---name, --long과 같이 긴 옵션들을 설정하고 싶을 때 사용
+	--name, --long과 같이 긴 옵션들을 설정하고 싶을 때 사용
 
 
 + short와 long옵션은 혼용해서 사용이 가능하다.
@@ -29,7 +29,7 @@ getopt는 /usr/bin/getopt에 위치한 외부 명령으로 기본적으로 short
 
 ***
 
-###getopt의 사용법
+### getopt의 사용법
 
 
 getopt [option] "옵션으로 사용할 문자열" "옵션으로 사용되는 변수"
@@ -37,17 +37,17 @@ getopt [option] "옵션으로 사용할 문자열" "옵션으로 사용되는 �
 
 ***
 
-###예시
+### 예시
 
 1. short 옵션을 사용한 getopt
 
-getopt -o a:b:c
+	getopt -o a:b:c
 
--a와 -b는 옵션 인수를 갖게 된다.
+	-a와 -b는 옵션 인수를 갖게 된다.
 
 2. long 옵션을 사용한 getopt
 
-getopt -l name:,list:,hard
+	getopt -l name:,list:,hard
 
---name과 --list는 옵션 인수를 갖게 된다.
+	--name과 --list는 옵션 인수를 갖게 된다.
 
