@@ -1,5 +1,3 @@
-# open-source-repo
-
 # getopt와 getopts
 
 ### 두 명령어의 장점
@@ -247,7 +245,7 @@ sed 's/test/world/g' file # file전체에서 test라는 단어를 world로 치�
 
 파일로부터 레코드를 선택하고, 선택된 레코드에 포함된 값을 조작하거나 데이터화하는 것을 목적으로 하는 프로그램
 
-![image](‪C:\Users\bgcom\OneDrive\바탕 화면\awk이미지.png)
+![image]()
 
 **awk 명령으로 할 수 있는 일**
 
