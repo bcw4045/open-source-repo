@@ -23,6 +23,10 @@ getopt는 /usr/bin/getopt에 위치한 외부 명령으로 기본적으로 short
 
 --name, --long과 같이 긴 옵션들을 설정하고 싶을 때 사용
 
+
++ short와 long옵션은 혼용해서 사용이 가능하다.
+
+
 ***
 
 ###getopt의 사용법
@@ -30,6 +34,10 @@ getopt는 /usr/bin/getopt에 위치한 외부 명령으로 기본적으로 short
 
 getopt [option] "옵션으로 사용할 문자열" "옵션으로 사용되는 변수"
 
+
+***
+
+###예시
 
 
 
