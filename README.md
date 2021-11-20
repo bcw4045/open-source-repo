@@ -39,10 +39,15 @@ getopt [option] "옵션으로 사용할 문자열" "옵션으로 사용되는 �
 
 ###예시
 
+1. short 옵션을 사용한 getopt
 
+getopt -o a:b:c
 
+-a와 -b는 옵션 인수를 갖게 된다.
 
+2. long 옵션을 사용한 getopt
 
+getopt -l name:,list:,hard
 
-
+--name과 --list는 옵션 인수를 갖게 된다.
 
