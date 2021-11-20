@@ -245,7 +245,7 @@ sed 's/test/world/g' file # file전체에서 test라는 단어를 world로 치�
 
 파일로부터 레코드를 선택하고, 선택된 레코드에 포함된 값을 조작하거나 데이터화하는 것을 목적으로 하는 프로그램
 
-![image]()
+![깃허브이미지](https://user-images.githubusercontent.com/67230834/142733022-7cb19998-5015-4c30-b822-64a0a5d03aca.png)
 
 **awk 명령으로 할 수 있는 일**
 
