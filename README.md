@@ -264,17 +264,44 @@ awk [option] [awk program] [arg]
 ```
 
 
+**awk program**
 
+awk program은 pattern과 action으로 나눌 수 있다. action과 pattern은 모두 생략이 가능하며, action은 print명령을 default로 가지고 있다.
 
++ pattern 생략
 
+	```
+	awk '{ print }'	./file.txt # file.txt의 모든 레코드 출력.
+	```
 
+	pattern을 생략할 경우 매칭 여부를 검사할 문자열 패턴 정보가 없기 때문에 모든 레코드가 적용된다.
 
++ action 생략
 
+	```
+	awk '/p/' ./file.txt # file.txt에서 p를 포함하는 레코드 출력.
+	```
 
+	action을 생략할 경우 default 액션인 print가 실행된다.
 
++ BEGIN
 
+	```
+	awk 'BEGIN { print "시작" } { print $1, $2 }' file.txt # 가장 처음에 "시작"을 출력함. 
+	```
+	
+	BEGIN 패턴은 입력데이터로부터 첫 번째 레코드를 처리하기 전에 "BEGIN"에 지정된 액션을 실행한다.
 
++ END
 
+	```
+	awk '{ print $1, $2 } END { print "끝" }' file.txt # 모든 출력이 끝난 후 '끝'을 출력함
+	```
+
+	END 패턴은 입력데이터로부터 모든 레코드를 처리한 후에 END에 지정된 액션을 실행한다.
+	
+	
+**명령어 사용예시**
 
 
 
