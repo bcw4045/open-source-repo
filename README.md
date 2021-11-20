@@ -53,7 +53,9 @@ getopt는 /usr/bin/getopt에 위치한 외부 명령으로 기본적으로 short
 
 ***
 
-```getopt [option] "옵션으로 사용할 문자열" "옵션으로 사용되는 변수"```
+```
+getopt [option] "옵션으로 사용할 문자열" "옵션으로 사용되는 변수"
+```
 
 ### 예시
 
@@ -81,7 +83,7 @@ getopt와 같이 옵션 처리를 편리하게 해주는 역할을 한다.
 
 ***
 
-#### 옵션 사용
+**옵션 사용**
 
 ```
 #!/bin/bash
@@ -96,6 +98,7 @@ while getopts “abc” opt; do
 			;;
 		c)
 			echo “c 옵션 실행”
+			;;
 		\?)
 			echo $@ is not balid option
 			exit 0
@@ -106,13 +109,19 @@ done
 
 **실행**
 
-```./exam.sh –a```
+```
+./exam.sh –a
+```
 
-```# -a 옵션 실행```
+```
+# -a 옵션 실행
+```
 
 **에러 처리**
 
-```./exam.sh –4```
+```
+./exam.sh –4
+```
 ```
 ./exam2.sh: illegal option -- 5
 -5 is not balid option
@@ -128,6 +137,58 @@ done
 + verbose mode
 
 	option:
+	
+	인자가 필요한 옵션일 경우 콜론을 붙여서 사용함.
+	
++ silent mode
+
+	:option:
+	
+	양쪽에 콜론을 붙일 경우 더욱 세밀한 에러 메시지 출력이 가능함.
+	
+
+```
+#!/bin/bash
+
+while getopts “ab:c” opt; do
+	case $opt in
+		a)
+			echo “a 옵션 실행”
+			;;
+		b)
+			echo $OPTARG
+			;;
+		c)
+			echo “c 옵션 실행”
+			;;
+		\?)
+			echo $@ is not balid option
+			exit 0
+			;;
+	esac
+done
+```
+
+```
+./exam.sh –b “hello”
+```
+
+```
+# hello
+```
+
+```
+./exam.sh –a
+```
+```
+# -a 옵션 실행`
+```
+
+
+# sed와 awk 명령어
+
+
+
 	
 	
 	
