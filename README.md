@@ -75,6 +75,50 @@ getopt는 /usr/bin/getopt에 위치한 외부 명령으로 기본적으로 short
 
 ## getopts
 
+getopt와 같이 옵션 처리를 편리하게 해주는 역할을 한다.
+
+### 예시
+
+***
+
+#### 옵션 사용
+
+```
+#!/bin/bash
+
+while getopts “abc” opt; do
+	case $opt in
+		a)
+			echo “a 옵션 실행”
+			;;
+		b)
+			echo “b 옵션 실행”
+			;;
+		c)
+			echo “c 옵션 실행”
+		\?)
+			echo $@ is not balid option
+			exit 0
+			;;
+	esac
+done
+```
+
+**실행**
+
+```./exam.sh –a```
+
+```# -a 옵션 실행```
+
+**에러 처리**
+
+```./exam.sh –4```
+```
+./exam2.sh: illegal option -- 5
+-5 is not balid option
+```
+
+
 
 
 
